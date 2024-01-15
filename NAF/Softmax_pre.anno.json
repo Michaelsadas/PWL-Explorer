@@ -1,0 +1,26 @@
+[
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Softmax_pre|Softmax_pre>io_last_out",
+    "sources":[
+      "~Softmax_pre|Softmax_pre>io_last_in",
+      "~Softmax_pre|Softmax_pre>io_state"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Softmax_pre|Softmax_pre>io_out",
+    "sources":[
+      "~Softmax_pre|Softmax_pre>io_state",
+      "~Softmax_pre|Softmax_pre>io_in"
+    ]
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"."
+  }
+]
